@@ -28,6 +28,19 @@ cd frontend && npm run dev
 - New game and play again buttons
 - Duplicate letter handling — consistent with standard Wordle rules
 
+#### Roadmap (What I'd do given more time)
+
+- Persistent sessions
+- Statistics
+- On-screen keyboard
+- More fleshed out UI
+
+A persistent session would be good to allow the player to come back to the game. This would require some sort of database or use browser's local storage. Having persistence give us all the data we need to calculate statistics such as win-rate and guess distribution.
+
+An on-screen keyboard would be good but given the scope of this project, it feels like overkill. Especially because this is an application run on a desktop which would have access to a keyboard.
+
+There is always room for improvement on the UI. Logos, navbars, more statistics on-screen.
+
 #### Choices
 
 Chosen tech stack:
