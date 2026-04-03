@@ -33,7 +33,7 @@ export function Game() {
     return (
         <Stack align="center" gap="md">
             <Button onClick={() => void startGame()}>New game</Button>
-            <Text size="lg" fw={500}>
+            <Text size="md" fw={500}>
                 {game ? `Game ID: ${game.id}` : "Loading..."}
             </Text>
             <Text size="md">
