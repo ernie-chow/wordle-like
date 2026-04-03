@@ -2,7 +2,7 @@
 
 A clone of Wordle
 
-#### Setup
+### Setup
 
 **Prerequisites:** Node.js 18+ and npm 9+
 
@@ -17,7 +17,7 @@ cd backend && npm run dev
 cd frontend && npm run dev
 ```
 
-#### Features
+### Features
 
 - 6 attempts to guess a 5-letter word
 - Colour-coded tile feedback — green (correct position), yellow (wrong position), grey (not in word)
@@ -28,7 +28,7 @@ cd frontend && npm run dev
 - New game and play again buttons
 - Duplicate letter handling — consistent with standard Wordle rules
 
-#### Roadmap (What I'd do given more time)
+### Roadmap (What I'd do given more time)
 
 - Persistent sessions
 - Statistics
@@ -41,23 +41,23 @@ An on-screen keyboard would be good but given the scope of this project, it feel
 
 There is always room for improvement on the UI. Logos, navbars, more statistics on-screen.
 
-#### Choices
+### Choices
 
 Chosen tech stack:
 Express backend
 React frontend with Mantine UI library
 
-##### Express
+#### Express
 
 Chosen because it is a simple and widely used framework for Node.js backends. Fastify was also considered as it is faster and has a nicer built-in schema validation story, but that performance difference only really matters at scale, probably not a factor in a simple wordle-clone. Express also has broader familiarity, so the code is easier to pick up for anyone who hasn't used Fastify before. If this were a high-throughput production API I'd revisit that decision, but for this it would've been over-engineering.
 
-##### Mantine UI
+#### Mantine UI
 
 Chosen because I quite like the Mantine UI library. They have good documentation and also many UI components available. Definitely room for growth and adding features to the UI if given more time as the library is quite extensible.
 
-Tailwind was the obvious alternative, and it's great, but it's utility-first — you're still building your own components from scratch. For a project like this where the UI needs to feel polished quickly, Mantine gives you a full component library (buttons, layout primitives, hooks) with sensible defaults and good TypeScript support out of the box. The `useWindowEvent` hook from `@mantine/hooks` is a good example of where it saves real time.
+Tailwind was the obvious alternative, but involves building components from scratch. For a project like this where the UI needs to be built quickly, Mantine gives you the components with sensible defaults and good TypeScript support out of the box. The `useWindowEvent` hook from `@mantine/hooks` is a good example of where it real time.
 
-##### Monorepo with npm workspaces
+#### Monorepo with npm workspaces
 
 Sharing the game model types between frontend and backend without duplicating them was the main driver here. The trade-off is a slightly more involved initial setup, but `npm install` from the root handles everything.
 
@@ -65,13 +65,13 @@ This is an npm workspace monorepo with three packages: `frontend`, `backend`, an
 Run `npm install` from the root to link all packages. Shared types (game model) live in `shared/`
 and are imported by both frontend and backend as `@wordle/shared`.
 
-#### Data Sources
+### Data Sources
 
 Wordle possible answers from: https://gist.github.com/cfreshman/a03ef2cba789d8cf00c08f767e0fad7b
 
 Wordle allowed guesses from: https://gist.github.com/cfreshman/cdcdf777450c5b5301e439061d29694c
 
-#### Testing
+### Testing
 
 **Backend** — Jest with `ts-jest`, tests live in `backend/tests/`
 
