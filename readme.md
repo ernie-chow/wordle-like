@@ -44,8 +44,9 @@ There is always room for improvement on the UI. Logos, navbars, more statistics 
 ### Choices
 
 Chosen tech stack:
-Express backend
-React frontend with Mantine UI library
+
+- Express backend
+- React frontend with Mantine UI library
 
 #### Express
 
